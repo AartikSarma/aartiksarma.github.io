@@ -1,0 +1,28 @@
+# Site settings
+title: Aartik Sarma
+email: aartiksarma@gmail.com
+description: >-
+  Personal website and blog
+baseurl: ""
+url: "https://aartiksarma.github.io"
+github_username: aartiksarma
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - CLAUDE.md
