@@ -1,11 +1,12 @@
 # Site settings
 title: Aartik Sarma
-email: aartiksarma@gmail.com
 description: >-
   Personal website and blog
 baseurl: ""
 url: "https://aartiksarma.github.io"
 github_username: aartiksarma
+twitter_username: AartikSarma
+linkedin_username: AartikSarma
 
 # Build settings
 theme: minima
