@@ -56,8 +56,10 @@ Add an entry to `_data/media.yml`. `title`, `outlet`, and `url` are required;
 `featured: true` also surfaces it on the homepage. The **Media** nav link only
 appears while that file has at least one entry.
 
-Use `quote` for a verbatim pull quote — keep it contiguous, don't splice
-sentences from different parts of a piece together.
+There is an optional `quote` field for a pull quote. It suits someone else's
+words about the work better than quoting yourself, and is unused by default. If
+you do use it, keep the quote contiguous — don't splice sentences from different
+parts of a piece together.
 
 ## Starting the blog
 

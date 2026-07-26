@@ -9,8 +9,9 @@
 #   date     optional. Free text, e.g. "July 2026". Omitted cleanly if absent.
 #   host     optional. Interviewer or host.
 #   blurb    optional. One or two sentences on what it covered.
-#   quote    optional. A verbatim pull quote. Keep it contiguous — do not splice
-#            sentences from different parts of the piece.
+#   quote    optional. A verbatim pull quote — better suited to someone else's
+#            words about the work than to quoting yourself. If used, keep it
+#            contiguous; don't splice sentences from different parts of a piece.
 #   featured optional. true surfaces it on the homepage.
 # ---------------------------------------------------------------------------
 
@@ -39,7 +40,3 @@
     a large language model is the wrong tool, what it takes for a clinician to
     contribute to medical AI, and why data fragmentation — not model
     architecture — is the binding constraint on precision medicine.
-  quote: >-
-    The art of computational medical research is understanding what the right
-    tool is to use for a specific question. More focused tools can often get you
-    to an answer faster and in a more explainable fashion.
