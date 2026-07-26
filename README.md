@@ -90,9 +90,9 @@ exists, and disappears again if the directory is emptied.
   re-tints the whole site.
 - **Blanking a link removes it.** Set any value under `social:` in `_config.yml`
   to `""` and that footer link disappears.
-- **The CV has placeholders.** Year ranges I could not verify from public
-  sources render as `—` in `cv.html`; there is a comment at the top of that file
-  listing what to fill in.
+- **The CV is hand-written.** Entries live directly in `cv.html` as `.cv-block`
+  elements — copy one to add a row. A comment at the top of the file notes what
+  is still worth adding.
 
 ## Running it locally
 
