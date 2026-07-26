@@ -1,0 +1,171 @@
+---
+layout: wide
+title: Curriculum vitae
+subtitle: >-
+  A short version. The full publication list lives on its own page, and a PDF
+  is available on request.
+permalink: /cv/
+---
+
+{%- comment -%}
+-------------------------------------------------------------------------------
+EDIT ME: dates to confirm
+-------------------------------------------------------------------------------
+Entries below deliberately omit year ranges that I could not verify from public
+sources. Fill in the `cv-block__when` values where they read "—" and add
+anything missing (teaching, mentorship, editorial roles, additional grants).
+
+Verified from public sources:
+  • MD, Harvard Medical School (2014)
+  • Internal medicine residency, Massachusetts General Hospital
+  • Pulmonary & critical care fellowship, UCSF
+  • Undergraduate: Brown University, biomedical engineering and public policy
+  • K23 career development award, NHLBI
+  • ASCI Emerging Generation Award (2023)
+-------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<div class="wrap" style="padding-bottom: clamp(3rem, 7vw, 5rem)">
+
+  <div class="prose" style="padding-bottom: 1rem">
+    <p class="lead">
+      Aartik Sarma is a pulmonary and critical care physician-scientist at UCSF.
+      He cares for patients in the intensive care unit and runs a research
+      program using transcriptomic, metagenomic, and computational methods to
+      find the biological distinctions that current definitions of critical
+      illness miss.
+    </p>
+  </div>
+
+  <section class="section" style="padding-top: 0">
+    <div class="section-head"><h2 class="section-head__title">Appointments</h2></div>
+
+    <div class="cv-block">
+      <p class="cv-block__when">Current</p>
+      <div>
+        <p class="cv-block__what">Assistant Professor of Medicine</p>
+        <p class="cv-block__where">
+          Division of Pulmonary, Critical Care, Allergy &amp; Sleep Medicine ·
+          University of California, San Francisco
+        </p>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <p class="cv-block__when">Current</p>
+      <div>
+        <p class="cv-block__what">Member, Center for Precision Research in Critical Care</p>
+        <p class="cv-block__where">University of California, San Francisco</p>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <p class="cv-block__when">Current</p>
+      <div>
+        <p class="cv-block__what">Member, Joint Program in Computational Precision Health</p>
+        <p class="cv-block__where">UCSF &amp; UC Berkeley</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2 class="section-head__title">Training</h2></div>
+
+    <div class="cv-block">
+      <p class="cv-block__when">&mdash;</p>
+      <div>
+        <p class="cv-block__what">MAS, Clinical Research</p>
+        <p class="cv-block__where">University of California, San Francisco</p>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <p class="cv-block__when">&mdash;</p>
+      <div>
+        <p class="cv-block__what">Fellowship, Pulmonary &amp; Critical Care Medicine</p>
+        <p class="cv-block__where">University of California, San Francisco</p>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <p class="cv-block__when">&mdash;</p>
+      <div>
+        <p class="cv-block__what">Residency, Internal Medicine</p>
+        <p class="cv-block__where">Massachusetts General Hospital</p>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <p class="cv-block__when">2014</p>
+      <div>
+        <p class="cv-block__what">MD</p>
+        <p class="cv-block__where">Harvard Medical School</p>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <p class="cv-block__when">&mdash;</p>
+      <div>
+        <p class="cv-block__what">Biomedical engineering and public policy</p>
+        <p class="cv-block__where">Brown University</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2 class="section-head__title">Funding &amp; honors</h2></div>
+
+    <div class="cv-block">
+      <p class="cv-block__when">Current</p>
+      <div>
+        <p class="cv-block__what">K23 Mentored Patient-Oriented Research Career Development Award</p>
+        <p class="cv-block__where">National Heart, Lung, and Blood Institute</p>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <p class="cv-block__when">2023</p>
+      <div>
+        <p class="cv-block__what">Emerging Generation Award</p>
+        <p class="cv-block__where">American Society for Clinical Investigation</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2 class="section-head__title">Selected research</h2></div>
+
+    <div class="selected">
+      {%- assign featured = site.data.publications | where: "featured", true -%}
+      {%- for pub in featured %}
+      <article class="selected__item">
+        <p class="selected__meta">{{ pub.year }}</p>
+        <div>
+          <h3 class="selected__title">
+            {%- if pub.doi -%}<a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a>
+            {%- else -%}{{ pub.title }}{%- endif -%}
+          </h3>
+          <p class="selected__venue">
+            <span class="pub__journal">{{ pub.journal }}</span>
+            {%- if pub.role == 'first' %}<span class="tag tag--first">First author</span>{% endif -%}
+            {%- if pub.role == 'senior' %}<span class="tag tag--senior">Senior author</span>{% endif -%}
+          </p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <p class="empty-note">
+      <a href="{{ '/publications/' | relative_url }}">Full publication list &rarr;</a>
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2 class="section-head__title">Contact</h2></div>
+    <p class="section-intro">
+      <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><br>
+      <span class="muted">{{ site.author.affiliation }}</span>
+    </p>
+  </section>
+
+</div>

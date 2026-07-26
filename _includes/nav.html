@@ -1,0 +1,29 @@
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="site-head__name" href="{{ '/' | relative_url }}">
+      {{ site.author.name }}
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="{{ '/research/' | relative_url }}"{% if page.url contains '/research' %} aria-current="page"{% endif %}>Research</a>
+      <a href="{{ '/publications/' | relative_url }}"{% if page.url contains '/publications' %} aria-current="page"{% endif %}>Publications</a>
+      <a href="{{ '/software/' | relative_url }}"{% if page.url contains '/software' %} aria-current="page"{% endif %}>Software</a>
+      {%- if site.posts.size > 0 %}
+      <a href="{{ '/writing/' | relative_url }}"{% if page.url contains '/writing' %} aria-current="page"{% endif %}>Writing</a>
+      {%- endif %}
+      <a href="{{ '/cv/' | relative_url }}"{% if page.url contains '/cv' %} aria-current="page"{% endif %}>CV</a>
+
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme" title="Switch theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>

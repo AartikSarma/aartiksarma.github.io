@@ -1,0 +1,87 @@
+---
+layout: wide
+title: Software
+subtitle: >-
+  Analysis is only as trustworthy as the code behind it. Everything here is
+  open, and the code for each paper is released alongside it.
+permalink: /software/
+---
+
+<div class="wrap" style="padding-bottom: clamp(3rem, 7vw, 5rem)">
+
+  <section class="section" style="padding-top: 1rem">
+    <div class="section-head">
+      <h2 class="section-head__title">Tools</h2>
+    </div>
+    <p class="section-intro">
+      Packages meant to be used by other people, on other datasets.
+    </p>
+
+    <div class="repo-grid">
+      {%- assign tools = site.data.software | where: "group", "tools" -%}
+      {%- for repo in tools %}
+      <article class="repo">
+        <div class="repo__head">
+          <h3 class="repo__name"><a href="https://github.com/{{ repo.repo }}">{{ repo.name }}</a></h3>
+          <span class="repo__lang">{{ repo.lang }}</span>
+        </div>
+        <p class="repo__blurb">{{ repo.blurb }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-head__title">Analysis code for papers</h2>
+    </div>
+    <p class="section-intro">
+      The code behind published results, so the analyses can be checked,
+      reproduced, and extended.
+    </p>
+
+    <div class="repo-grid">
+      {%- assign papers = site.data.software | where: "group", "papers" -%}
+      {%- for repo in papers %}
+      <article class="repo">
+        <div class="repo__head">
+          <h3 class="repo__name"><a href="https://github.com/{{ repo.repo }}">{{ repo.name }}</a></h3>
+          <span class="repo__lang">{{ repo.lang }}</span>
+        </div>
+        <p class="repo__blurb">{{ repo.blurb }}</p>
+        {%- if repo.paper %}
+        <p class="repo__paper">{{ repo.paper }}</p>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-head__title">Experiments</h2>
+    </div>
+    <p class="section-intro">
+      Smaller things built to answer a question or scratch an itch. No promises
+      about maintenance.
+    </p>
+
+    <div class="repo-grid">
+      {%- assign experiments = site.data.software | where: "group", "experiments" -%}
+      {%- for repo in experiments %}
+      <article class="repo">
+        <div class="repo__head">
+          <h3 class="repo__name"><a href="https://github.com/{{ repo.repo }}">{{ repo.name }}</a></h3>
+          <span class="repo__lang">{{ repo.lang }}</span>
+        </div>
+        <p class="repo__blurb">{{ repo.blurb }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <p class="empty-note">
+    Everything else is on <a href="https://github.com/{{ site.social.github }}">GitHub</a>.
+  </p>
+
+</div>

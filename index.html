@@ -1,0 +1,231 @@
+---
+layout: default
+title: Home
+description: >-
+  Aartik Sarma is a pulmonary and critical care physician-scientist at UCSF. He
+  studies why patients with the same diagnosis respond differently to the same
+  treatment, using transcriptomics, metagenomics, and computational methods in
+  ARDS and sepsis.
+---
+
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <p class="hero__eyebrow">Pulmonary &amp; critical care · UCSF</p>
+
+      <h1 class="hero__name">Aartik Sarma</h1>
+
+      <p class="hero__lede">
+        I take care of people in the intensive care unit, and I study
+        <strong>why two patients with the same diagnosis can respond so
+        differently to the same treatment</strong>.
+      </p>
+
+      <p class="hero__body">
+        Critical illness is defined by what we can see at the bedside — a
+        low oxygen level, a chest X-ray, a blood pressure. Those definitions
+        gather together patients whose underlying biology has almost nothing in
+        common, which is one reason so many promising treatments work in the lab
+        and then fail in large trials. My lab reads the molecular state of the
+        lungs and blood directly, looking for the distinctions our current
+        definitions miss.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">The research</a>
+        <a class="btn" href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a class="btn" href="{{ '/software/' | relative_url }}">Code</a>
+      </div>
+    </div>
+
+    <aside class="rail">
+      <dl>
+        <div>
+          <dt>Position</dt>
+          <dd>{{ site.author.role }}<br>University of California, San Francisco</dd>
+        </div>
+        <div>
+          <dt>Affiliations</dt>
+          <dd>
+            Division of Pulmonary, Critical Care, Allergy &amp; Sleep Medicine<br>
+            Center for Precision Research in Critical Care<br>
+            Joint Program in Computational Precision Health
+          </dd>
+        </div>
+        <div>
+          <dt>Training</dt>
+          <dd>
+            Brown (ScB) · Harvard Medical School (MD)<br>
+            Massachusetts General Hospital · UCSF
+          </dd>
+        </div>
+        <div>
+          <dt>Elsewhere</dt>
+          <dd>
+            <a href="mailto:{{ site.author.email }}">Email</a> ·
+            <a href="https://github.com/{{ site.social.github }}">GitHub</a> ·
+            <a href="{{ site.social.scholar }}">Scholar</a>
+          </dd>
+        </div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- ===================================================================== -->
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-head__title">What I do</h2>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <span class="pillar__num">01</span>
+        <h3>Care for patients</h3>
+        <p>
+          I work as an attending physician in the ICU, caring for people with
+          respiratory failure, sepsis, and other critical illness. Every
+          research question I have started with a patient in front of me.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <span class="pillar__num">02</span>
+        <h3>Read the lung directly</h3>
+        <p>
+          We sequence RNA from airway fluid and blood in critically ill
+          patients — a molecular read-out of what the immune system is
+          actually doing, which no bedside measurement can show.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <span class="pillar__num">03</span>
+        <h3>Build the tools</h3>
+        <p>
+          Analysis of this kind is only as trustworthy as the code behind it,
+          so I write and release it — statistical tools, federated ICU data
+          pipelines, and the analysis for each of my papers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================== -->
+
+<section class="section section--sunk">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-head__title">Selected work</h2>
+      <a class="section-head__more" href="{{ '/publications/' | relative_url }}">All publications &rarr;</a>
+    </div>
+
+    <div class="selected">
+      {%- assign featured = site.data.publications | where: "featured", true -%}
+      {%- for pub in featured %}
+      <article class="selected__item">
+        <p class="selected__meta">{{ pub.year }}</p>
+
+        <div>
+          <h3 class="selected__title">
+            {%- if pub.doi -%}
+            <a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a>
+            {%- else -%}
+            {{ pub.title }}
+            {%- endif -%}
+          </h3>
+
+          {%- if pub.summary %}
+          <p class="selected__summary">{{ pub.summary }}</p>
+          {%- endif %}
+
+          <p class="selected__venue">
+            <span class="pub__journal">{{ pub.journal }}</span>
+            {%- if pub.role == 'first' %}<span class="tag tag--first">First author</span>{% endif -%}
+            {%- if pub.role == 'senior' %}<span class="tag tag--senior">Senior author</span>{% endif -%}
+            {%- if pub.doi %}<a href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif -%}
+            {%- if pub.code %}<a href="{{ pub.code }}">Code</a>{% endif -%}
+          </p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================== -->
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-head__title">Open code</h2>
+      <a class="section-head__more" href="{{ '/software/' | relative_url }}">All software &rarr;</a>
+    </div>
+
+    <p class="section-intro">
+      Tools I maintain for critical care data and genomics. Everything is
+      MIT- or GPL-licensed and open to contributions.
+    </p>
+
+    <div class="repo-grid">
+      {%- assign repos = site.data.software | where: "featured", true -%}
+      {%- for repo in repos limit: 6 %}
+      <article class="repo">
+        <div class="repo__head">
+          <h3 class="repo__name"><a href="https://github.com/{{ repo.repo }}">{{ repo.name }}</a></h3>
+          <span class="repo__lang">{{ repo.lang }}</span>
+        </div>
+        <p class="repo__blurb">{{ repo.blurb }}</p>
+        {%- if repo.paper %}
+        <p class="repo__paper">{{ repo.paper }}</p>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================== -->
+
+{%- if site.posts.size > 0 %}
+<section class="section section--sunk">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-head__title">Writing</h2>
+      <a class="section-head__more" href="{{ '/writing/' | relative_url }}">All posts &rarr;</a>
+    </div>
+
+    <ul class="post-list">
+      {%- for post in site.posts limit: 3 %}
+      <li class="post-item">
+        <p class="post-item__date">{{ post.date | date: "%b %Y" }}</p>
+        <div>
+          <h3 class="post-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="post-item__excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
+<!-- ===================================================================== -->
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-head__title">Get in touch</h2>
+    </div>
+
+    <p class="section-intro">
+      I'm always glad to hear from trainees looking for a project, from
+      investigators with a cohort and a question, and from anyone who wants to
+      reuse the code. The fastest way to reach me is
+      <a href="mailto:{{ site.author.email }}">email</a>.
+    </p>
+  </div>
+</section>

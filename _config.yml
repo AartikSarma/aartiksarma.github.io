@@ -1,20 +1,65 @@
+# ---------------------------------------------------------------------------
 # Site settings
+# ---------------------------------------------------------------------------
 title: Aartik Sarma
+tagline: "Pulmonary and critical care physician-scientist, UCSF"
 description: >-
-  Personal website and blog
-baseurl: ""
+  Aartik Sarma is a pulmonary and critical care physician-scientist at UCSF who
+  studies why patients with the same diagnosis respond differently to the same
+  treatment, using transcriptomics, metagenomics, and computational methods in
+  ARDS and sepsis.
 url: "https://aartiksarma.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: Aartik Sarma
+  credentials: "MD, MAS"
+  role: "Assistant Professor of Medicine"
+  affiliation: "Division of Pulmonary, Critical Care, Allergy and Sleep Medicine, UCSF"
+  email: aartik.sarma@ucsf.edu
+
+# Links used in the nav, footer, and structured data.
+# Set any of these to a blank string to hide it.
+social:
+  github: aartiksarma
+  twitter: AartikSarma
+  bluesky: ""
+  linkedin: aartiksarma
+  scholar: "https://scholar.google.com/citations?user=BCmu_34AAAAJ"
+  orcid: ""
+  ucsf_profile: "https://profiles.ucsf.edu/aartik.sarma"
+
+# Publication list rendering. Author lists longer than `max_authors` are
+# truncated to `authors_shown` names — "Sarma A" is always kept visible even
+# when it falls past the cutoff. Set max_authors very high for full lists.
+publications:
+  max_authors: 10
+  authors_shown: 6
+
+# Legacy keys kept so older references keep resolving
 github_username: aartiksarma
 twitter_username: AartikSarma
-linkedin_username: AartikSarma
+linkedin_username: aartiksarma
 
+# ---------------------------------------------------------------------------
 # Build settings
-theme: minima
+# ---------------------------------------------------------------------------
+# No `theme:` key — this site uses the local _layouts / _includes / assets.
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Exclude from processing
+permalink: /writing/:year/:month/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -22,8 +67,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
   - CLAUDE.md
+  - README.md
+  - simplified-pca-simulation.tsx

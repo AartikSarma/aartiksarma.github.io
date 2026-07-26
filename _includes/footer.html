@@ -1,0 +1,51 @@
+{%- comment -%}
+  `x != blank` is unreliable in Jekyll's Liquid (String has no #blank?), so each
+  link is normalised through `strip` and compared to an empty string. Blanking a
+  value in _config.yml therefore removes the link.
+{%- endcomment -%}
+{%- assign s_email    = site.author.email       | strip -%}
+{%- assign s_github   = site.social.github      | strip -%}
+{%- assign s_scholar  = site.social.scholar     | strip -%}
+{%- assign s_orcid    = site.social.orcid       | strip -%}
+{%- assign s_linkedin = site.social.linkedin    | strip -%}
+{%- assign s_bluesky  = site.social.bluesky     | strip -%}
+{%- assign s_twitter  = site.social.twitter     | strip -%}
+{%- assign s_ucsf     = site.social.ucsf_profile | strip -%}
+
+<footer class="site-foot">
+  <div class="wrap site-foot__inner">
+    <p class="site-foot__where">
+      {{ site.author.name }}, {{ site.author.credentials }}<br>
+      <span class="muted">{{ site.author.affiliation }}</span>
+    </p>
+
+    <nav class="site-foot__links" aria-label="Elsewhere">
+      {%- if s_email != "" %}
+      <a href="mailto:{{ s_email }}">Email</a>
+      {%- endif %}
+      {%- if s_github != "" %}
+      <a href="https://github.com/{{ s_github }}" rel="me">GitHub</a>
+      {%- endif %}
+      {%- if s_scholar != "" %}
+      <a href="{{ s_scholar }}">Google Scholar</a>
+      {%- endif %}
+      {%- if s_orcid != "" %}
+      <a href="https://orcid.org/{{ s_orcid }}" rel="me">ORCID</a>
+      {%- endif %}
+      {%- if s_linkedin != "" %}
+      <a href="https://www.linkedin.com/in/{{ s_linkedin }}/" rel="me">LinkedIn</a>
+      {%- endif %}
+      {%- if s_bluesky != "" %}
+      <a href="https://bsky.app/profile/{{ s_bluesky }}" rel="me">Bluesky</a>
+      {%- endif %}
+      {%- if s_twitter != "" %}
+      <a href="https://twitter.com/{{ s_twitter }}" rel="me">Twitter</a>
+      {%- endif %}
+      {%- if s_ucsf != "" %}
+      <a href="{{ s_ucsf }}">UCSF Profile</a>
+      {%- endif %}
+    </nav>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>

@@ -1,0 +1,98 @@
+---
+layout: wide
+title: Publications
+subtitle: >-
+  Peer-reviewed work. Preprint versions of published papers are omitted so each
+  study appears once. Every entry links to the publisher's version.
+permalink: /publications/
+---
+
+<div class="wrap">
+
+  <div class="pub-toolbar">
+    <span class="pub-toolbar__label">Show</span>
+    <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+    <button class="filter" type="button" data-filter="first" aria-pressed="false">First author</button>
+    <button class="filter" type="button" data-filter="senior" aria-pressed="false">Senior author</button>
+    <button class="filter" type="button" data-filter="research" aria-pressed="false">Research</button>
+    <button class="filter" type="button" data-filter="review" aria-pressed="false">Reviews</button>
+    <button class="filter" type="button" data-filter="commentary" aria-pressed="false">Commentary</button>
+    <span class="pub-toolbar__label" data-pub-count style="margin-left:auto"></span>
+  </div>
+
+  {%- assign pubs = site.data.publications | sort: "year" | reverse -%}
+  {%- assign years = pubs | map: "year" | uniq -%}
+
+  {%- for year in years %}
+  <section class="pub-year">
+    <h2 class="pub-year__label">{{ year }}</h2>
+
+    <ol class="pub-list">
+      {%- for pub in pubs -%}
+      {%- if pub.year == year %}
+      <li class="pub"
+          data-role="{{ pub.role | default: 'contributing' }}"
+          data-kind="{{ pub.kind | default: 'research' }}">
+
+        <h3 class="pub__title">
+          {%- if pub.doi -%}
+          <a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a>
+          {%- else -%}
+          {{ pub.title }}
+          {%- endif -%}
+        </h3>
+
+        {%- comment -%}
+          Long consortium author lists are truncated for readability, but the
+          site owner's name is always shown even when it falls past the cutoff.
+          Raise `publications.max_authors` in _config.yml to show full lists.
+        {%- endcomment -%}
+        {%- assign alist = pub.authors | split: ", " -%}
+        {%- assign cap = site.publications.max_authors | default: 10 -%}
+        {%- assign keep = site.publications.authors_shown | default: 6 -%}
+
+        <p class="pub__authors">
+          {%- if alist.size > cap -%}
+            {%- assign head = alist | slice: 0, keep | join: ", " -%}
+            {%- assign rest = alist.size | minus: keep -%}
+            {%- if head contains 'Sarma A' -%}
+              {{- head | replace: 'Sarma A', '<strong>Sarma A</strong>' -}}
+              <span class="pub__etal">, and {{ rest }} more</span>
+            {%- else -%}
+              {{- head -}}, … , <strong>Sarma A</strong><span
+                class="pub__etal">, and {{ rest | minus: 1 }} more</span>
+            {%- endif -%}
+          {%- else -%}
+            {{- pub.authors | replace: 'Sarma A', '<strong>Sarma A</strong>' -}}
+          {%- endif -%}
+        </p>
+
+        <p class="pub__venue">
+          <span class="pub__journal">{{ pub.journal }}</span>
+          {%- if pub.role == 'first' %}<span class="tag tag--first">First author</span>{% endif -%}
+          {%- if pub.role == 'senior' %}<span class="tag tag--senior">Senior author</span>{% endif -%}
+          {%- if pub.kind and pub.kind != 'research' %}<span class="tag">{{ pub.kind }}</span>{% endif -%}
+          {%- if pub.doi %}<a href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif -%}
+          {%- if pub.pmid %}<a href="https://pubmed.ncbi.nlm.nih.gov/{{ pub.pmid }}/">PubMed</a>{% endif -%}
+          {%- if pub.code %}<a href="{{ pub.code }}">Code</a>{% endif -%}
+        </p>
+
+        {%- if pub.summary %}
+        <p class="pub__summary">{{ pub.summary }}</p>
+        {%- endif %}
+      </li>
+      {%- endif -%}
+      {%- endfor %}
+    </ol>
+  </section>
+  {%- endfor %}
+
+  <p class="empty-note">
+    A complete and continuously updated list is on
+    <a href="{{ site.social.scholar }}">Google Scholar</a> and
+    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Sarma+Aartik%5BAuthor%5D">PubMed</a>.
+  </p>
+
+</div>
+
+<script src="{{ '/assets/js/publications.js' | relative_url }}" defer></script>

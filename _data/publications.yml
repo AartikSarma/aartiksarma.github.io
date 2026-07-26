@@ -1,0 +1,365 @@
+# ---------------------------------------------------------------------------
+# Publications
+# ---------------------------------------------------------------------------
+# Source: PubMed (https://pubmed.ncbi.nlm.nih.gov/), author query "Sarma Aartik".
+# Preprint versions of papers that were later published in a journal have been
+# omitted so each piece of work appears once.
+#
+# To add a paper, copy a block and fill it in. Fields:
+#   year      required. Used for grouping.
+#   title     required.
+#   journal   required. Journal name as you want it displayed.
+#   authors   required. Full author string; "Sarma A" is bolded automatically.
+#   doi       optional. Bare DOI, no https://doi.org/ prefix.
+#   pmid      optional.
+#   role      optional. one of: first | senior | contributing   (default: contributing)
+#   kind      optional. one of: research | review | commentary | guideline | trial
+#   featured  optional. true puts it in the "Selected work" list on the homepage.
+#   summary   optional. One or two plain-language sentences. Shown for featured
+#             papers on the homepage and expanded on the publications page.
+#   code      optional. URL to the analysis code for this paper.
+# ---------------------------------------------------------------------------
+
+- year: 2026
+  title: "Multi-omic and single-cell approaches for elucidating cell biology and pathobiology of lung disease"
+  journal: "American Journal of Respiratory Cell and Molecular Biology"
+  authors: "Sarma A, Sun X, Sucre J, Hong J, Medzikovic L, Jakubzick CV, Li X, Zemans RL, Singer BD"
+  doi: "10.1165/rcmb.2025-0092PS"
+  pmid: "40700713"
+  role: first
+  kind: review
+
+- year: 2026
+  title: "Treatment with allogeneic mesenchymal stromal cells for moderate to severe acute respiratory distress syndrome: a double-blind, placebo-controlled, multicenter phase 2b clinical trial (STAT)"
+  journal: "American Journal of Respiratory and Critical Care Medicine"
+  authors: "Matthay MA, Zhuo H, Sarma A, Alipanah-Lechner N, Hendrickson C, Kornblith LZ, Schreiber M, Zonies D, Khan A, Robinson B, Johnson NJ, Ware LB, Guillamondegui O, Casey J, Moore L, Patel B, Kao L, Wade CE, Fox E, Cox C, Khawanja F, Aguillon Prada R, Hossri S, Callcut R, Albertson T, Delucchi KL, McMillan M, Langelier CR, Pati S, McKenna DH, Leroux C, Calfee CS, Liu KD"
+  doi: "10.1164/rccm.202411-2254OC"
+  pmid: "40728562"
+  kind: trial
+
+- year: 2026
+  title: "Lung-protective mechanical ventilation is not sex neutral"
+  journal: "British Journal of Anaesthesia"
+  authors: "Chiumello D, Sarma A"
+  doi: "10.1016/j.bja.2026.02.007"
+  pmid: "41791986"
+  role: senior
+  kind: commentary
+
+- year: 2026
+  title: "Reply to Qian et al.: toward noninvasive acute respiratory distress syndrome phenotyping — bridging pulmonary transcriptomics to bedside tools"
+  journal: "American Journal of Respiratory and Critical Care Medicine"
+  authors: "Sarma A, Langelier CR, Calfee CS"
+  doi: "10.1093/ajrccm/aamag161"
+  pmid: "42087307"
+  role: first
+  kind: commentary
+
+- year: 2026
+  title: "Reply to Zhou and Yang: biological heterogeneity and biomarker-driven personalization — advancing mesenchymal stromal cell therapy for ARDS"
+  journal: "American Journal of Respiratory and Critical Care Medicine"
+  authors: "Matthay MA, Sarma A, Alipanah-Lechner N, Zhuo H"
+  doi: "10.1164/rccm.202508-1968LE"
+  pmid: "41091127"
+  kind: commentary
+
+- year: 2025
+  title: "Acute respiratory distress syndrome molecular phenotypes have distinct lower respiratory tract transcriptomes"
+  journal: "American Journal of Respiratory and Critical Care Medicine"
+  authors: "Sarma A, Christenson SA, Shoshana BZ, Oliveira AP, Neyton LPA, Mick E, Sinha P, Wilson JG, Moazed F, Leligdowicz A, Maddali MV, Siegel ER, Lyon ZM, Carrillo SH, Zhou H, Jauregui A, Ghale R, Caldera S, Hayakawa PS, Deiss T, Love C, Byrne A, Kalantar KL, DeRisi JL, Erle DJ, Krummel MF, Kangelaris KN, Hendrickson CM, Woodruff PG, Matthay MA, Bos LDJ, Langelier CR, Calfee CS"
+  doi: "10.1164/rccm.202407-1454OC"
+  pmid: "40997225"
+  role: first
+  kind: research
+  featured: true
+  code: "https://github.com/aartiksarma/ARDSPhenotypes"
+  summary: >-
+    Two patients can meet the identical definition of ARDS and have very
+    different biology. Blood tests separate ARDS into "hyperinflammatory" and
+    "hypoinflammatory" groups that respond differently to treatment — but nobody
+    had checked whether that split was real inside the lung. Sequencing airway
+    samples showed it is: the hyperinflammatory group has markedly more
+    interferon signaling and T-cell activation in the lungs themselves.
+
+- year: 2025
+  title: "Evaluating the generalisability of formulas used to set tidal volumes in mechanically ventilated patients: an observational, multicohort, retrospective study"
+  journal: "The Lancet Respiratory Medicine"
+  authors: "Sarma A, Sullivan KM, Baugh AD, Bhakta NR, Calfee CS"
+  doi: "10.1016/S2213-2600(25)00126-2"
+  pmid: "40680763"
+  role: first
+  kind: research
+  featured: true
+  code: "https://github.com/aartiksarma/PBWvsFVC"
+  summary: >-
+    Every ventilated patient's breath size is set from a height-and-sex formula
+    written in the 1990s. Across 21,000 patients, that formula overestimates
+    lung size in people who are older, shorter, female, or not White — and the
+    worse the mismatch, the higher the odds of dying. A piece of arithmetic
+    embedded in routine ICU care carries a measurable bias.
+
+- year: 2025
+  title: "Longitudinal multiomic signatures of ARDS and sepsis inflammatory phenotypes identify pathways associated with mortality"
+  journal: "Journal of Clinical Investigation"
+  authors: "Alipanah-Lechner N, Neyton L, Sinha P, Leroux C, Bardillon K, Carrillo SA, Chak S, Chao O, Hariharan T, Hendrickson C, Kangelaris K, Langelier CR, Lee D, Lin C, Liu K, Magee L, Ringor A, Sarma A, Schmiege E, Spottiswoode N, Sullivan K, Weingart MF, Willmore A, Zhuo H, Rogers AJ, Stringer KA, Matthay MA, Calfee CS"
+  doi: "10.1172/JCI196290"
+  pmid: "41329523"
+  kind: research
+
+- year: 2025
+  title: "Prognostic relevance of inflammatory subphenotypes in immunocompromised patients with sepsis"
+  journal: "Critical Care Medicine"
+  authors: "Weingart MF, Willmore A, Zhuo H, Magee L, Chao O, Lin C, Schmiege E, Hariharan T, Chak S, Bardillon K, Lee D, Leroux C, Obeidalla SN, Kerchberger VE, Sullivan K, Langelier C, Hendrickson CM, Kangelaris KN, Sarma A, Evrard B, Alipanah-Lechner N, Sinha P, Matthay MA, Ware LB, Calfee CS"
+  doi: "10.1097/CCM.0000000000006920"
+  pmid: "41150892"
+  kind: research
+
+- year: 2025
+  title: "Circulating endothelial signatures correlate with worse outcomes in COVID-19, respiratory failure and ARDS"
+  journal: "Critical Care"
+  authors: "Costa Monteiro AC, Pickering H, Sarma A, Taylor CS, Jenkins MM, Hsu FM, Nadel B, Levy O, Baden LR, Melamed E, Ehrlich LIR, McComsey GA, Sekaly RP, Cairns CB, Haddad EK, Shaw AC, Hafler DA, Montgomery RR, Corry DB, Kheradmand F, Atkinson MA, Brakenridge SC, Higuita NIA, Metcalf JP, Hough CL, Messer WB, Pulendran B, Nadeau KC, Davis MM, Geng LN, Fernandez-Sesma A, Simon V, Krammer F, Kraft M, Bime C, Calfee CS, Erle DJ, Bosinger S, Eckalbar W, Maecker H, Rahman A, Guan L, Peters B, Kleinstein SH, Augustine AD, Diray-Arce J, Becker PM, Rouphael N, Agus M, Kulkarni H, Schaenmann JM, Salehi-Rad R, Matthay MA, Reed EF, Sapru A"
+  doi: "10.1186/s13054-025-05596-0"
+  pmid: "41088445"
+  kind: research
+
+- year: 2025
+  title: "Research priorities for noninvasive sampling of the lower respiratory tract during acute respiratory failure: an official American Thoracic Society workshop report"
+  journal: "Annals of the American Thoracic Society"
+  authors: "Bain W, Sarma A, Morales-Nebreda L, Rizzo AN, Herron M, Wright SW, Hagan RS, Vigeland CL, Mwizerwa E, Pickens C, Toth S, Nonoyama M, Cao B, Luna CM, Rubin E, Torres A, Bos LD, McVerry BJ, Restrepo MI, Baron RM, Ware LB, Kulkarni HS, Calfee CS, Rogers AJ, Wunderink RG, Varisco BM, Dela Cruz CS, Kitsios GD, Mock JR, Morrell ED, McElvaney NG, Bastarache JA"
+  doi: "10.1513/AnnalsATS.202505-543ST"
+  pmid: "40748053"
+  kind: guideline
+
+- year: 2024
+  title: "Microbial dynamics and pulmonary immune responses in COVID-19 secondary bacterial pneumonia"
+  journal: "Nature Communications"
+  authors: "Spottiswoode N, Tsitsiklis A, Chu VT, Phan HV, DeVoe C, Love C, Ghale R, Bloomstein J, Zha BS, Maguire CP, Glascock A, Sarma A, Mourani PM, Kalantar KL, Detweiler A, Neff N, Haller SC, DeRisi JL, Erle DJ, Hendrickson CM, Kangelaris KN, Krummel MF, Matthay MA, Woodruff PG, Calfee CS, Langelier CR"
+  doi: "10.1038/s41467-024-53566-x"
+  pmid: "39472555"
+  kind: research
+
+- year: 2024
+  title: "Distinct pulmonary and systemic effects of dexamethasone in severe COVID-19"
+  journal: "Nature Communications"
+  authors: "Neyton LPA, Patel RK, Sarma A, Willmore A, Haller SC, Kangelaris KN, Eckalbar WL, Erle DJ, Krummel MF, Hendrickson CM, Woodruff PG, Langelier CR, Calfee CS, Fragiadakis GK"
+  doi: "10.1038/s41467-024-49756-2"
+  pmid: "38942804"
+  kind: research
+
+- year: 2024
+  title: "Host and microbe blood metagenomics reveals key pathways characterizing critical illness phenotypes"
+  journal: "American Journal of Respiratory and Critical Care Medicine"
+  authors: "Neyton LPA, Sinha P, Sarma A, Mick E, Kalantar K, Chen S, Wu N, Delucchi K, Zhuo H, Bos LDJ, Jauregui A, Gomez A, Hendrickson CM, Kangelaris KN, Leligdowicz A, Liu KD, Matthay MA, Langelier CR, Calfee CS"
+  doi: "10.1164/rccm.202308-1328OC"
+  pmid: "38190719"
+  kind: research
+
+- year: 2024
+  title: "Molecular phenotypes of acute respiratory distress syndrome in the ROSE trial have differential outcomes and gene expression patterns that differ at baseline and longitudinally over time"
+  journal: "American Journal of Respiratory and Critical Care Medicine"
+  authors: "Sinha P, Neyton L, Sarma A, Wu N, Jones C, Zhuo H, Liu KD, Sanchez Guerrero E, Ghale R, Love C, Mick E, Delucchi KL, Langelier CR, Thompson BT, Matthay MA, Calfee CS"
+  doi: "10.1164/rccm.202308-1490OC"
+  pmid: "38345571"
+  kind: research
+
+- year: 2024
+  title: "An emerging racial disparity in US motor vehicle fatalities"
+  journal: "JAMA Surgery"
+  authors: "Massenkoff M, Chalfin A, Sarma A"
+  doi: "10.1001/jamasurg.2024.2247"
+  pmid: "39141358"
+  role: senior
+  kind: research
+  featured: true
+  summary: >-
+    A collaboration with two economists, outside my usual field. US traffic
+    deaths rose sharply after 2020, and the increase was not shared equally —
+    it fell disproportionately on Black Americans. The same question that drives
+    my ICU work applies here: who does an average conceal?
+
+- year: 2024
+  title: "Rapidly improving ARDS differs clinically and biologically from persistent ARDS"
+  journal: "Critical Care"
+  authors: "Valda Toro PL, Willmore A, Wu NE, Delucchi KL, Jauregui A, Sinha P, Liu KD, Hendrickson CM, Sarma A, Neyton LPA, Leligdowicz A, Langelier CR, Zhuo H, Jones C, Kangelaris KN, Gomez AD, Matthay MA, Calfee CS"
+  doi: "10.1186/s13054-024-04883-6"
+  pmid: "38649920"
+  kind: research
+
+- year: 2024
+  title: "Biological effects of corticosteroids on pneumococcal pneumonia in mice — translational significance"
+  journal: "Critical Care"
+  authors: "Taenaka H, Wick KD, Sarma A, Matsumoto S, Ghale R, Fang X, Maishan M, Gotts JE, Langelier CR, Calfee CS, Matthay MA"
+  doi: "10.1186/s13054-024-04956-6"
+  pmid: "38807178"
+  kind: research
+
+- year: 2024
+  title: "Research bronchoscopy standards and the need for noninvasive sampling of the failing lungs"
+  journal: "Annals of the American Thoracic Society"
+  authors: "Bain W, Bastarache JA, Sarma A, McElvaney NG, Baron RM, McVerry BJ, Kitsios GD"
+  doi: "10.1513/AnnalsATS.202306-589LE"
+  pmid: "37776282"
+  kind: commentary
+
+- year: 2023
+  title: "Identifying molecular phenotypes in sepsis: an analysis of two prospective observational cohorts and secondary analysis of two randomised controlled trials"
+  journal: "The Lancet Respiratory Medicine"
+  authors: "Sinha P, Kerchberger VE, Willmore A, Chambers J, Zhuo H, Abbott J, Jones C, Wickersham N, Wu N, Neyton L, Langelier CR, Mick E, He J, Jauregui A, Churpek MM, Gomez AD, Hendrickson CM, Kangelaris KN, Sarma A, Leligdowicz A, Delucchi KL, Liu KD, Russell JA, Matthay MA, Walley KR, Ware LB, Calfee CS"
+  doi: "10.1016/S2213-2600(23)00237-0"
+  pmid: "37633303"
+  kind: research
+
+- year: 2023
+  title: "A myeloid program associated with COVID-19 severity is decreased by therapeutic blockade of IL-6 signaling"
+  journal: "iScience"
+  authors: "Hackney JA, Shivram H, Vander Heiden J, Overall C, Orozco L, Gao X, Kim E, West N, Qamra A, Chang D, Chakrabarti A, Choy DF, Combes AJ, Courau T, Fragiadakis GK, Rao AA, Ray A, Tsui J, Hu K, Kuhn NF, Krummel MF, Erle DJ, Kangelaris K, Sarma A, Lyon Z, Calfee CS, Woodruff PG, Ghale R, Mick E, Byrne A, Zha BS, Langelier C, Hendrickson CM, van der Wijst MGP, Hartoularos GC, Grant T, Bueno R, Lee DS, Greenland JR, Sun Y, Perez R, Ogorodnikov A, Ward A, Ye CJ, Ramalingam T, McBride JM, Cai F, Teterina A, Bao M, Tsai L, Rosas IO, Regev A, Kapadia SB, Bauer RN, Rosenberger CM"
+  doi: "10.1016/j.isci.2023.107813"
+  pmid: "37810211"
+  kind: research
+
+- year: 2023
+  title: "Aerosolized nicotine from e-cigarettes alters gene expression, increases lung protein permeability, and impairs viral clearance in murine influenza infection"
+  journal: "Frontiers in Immunology"
+  authors: "Maishan M, Sarma A, Chun LF, Caldera S, Fang X, Abbott J, Christenson SA, Langelier CR, Calfee CS, Gotts JE, Matthay MA"
+  doi: "10.3389/fimmu.2023.1076772"
+  pmid: "36999019"
+  kind: research
+
+- year: 2022
+  title: "Integrated host-microbe plasma metagenomics for sepsis diagnosis in a prospective cohort of critically ill adults"
+  journal: "Nature Microbiology"
+  authors: "Kalantar KL, Neyton L, Abdelghany M, Mick E, Jauregui A, Caldera S, Serpa PH, Ghale R, Albright J, Sarma A, Tsitsiklis A, Leligdowicz A, Christenson SA, Liu K, Kangelaris KN, Hendrickson C, Sinha P, Gomez A, Neff N, Pisco A, Doernberg SB, DeRisi JL, Matthay MA, Calfee CS, Langelier CR"
+  doi: "10.1038/s41564-022-01237-2"
+  pmid: "36266337"
+  kind: research
+
+- year: 2022
+  title: "Validation and utility of ARDS subphenotypes identified by machine-learning models using clinical data: an observational, multicohort, retrospective analysis"
+  journal: "The Lancet Respiratory Medicine"
+  authors: "Maddali MV, Churpek M, Pham T, Rezoagli E, Zhuo H, Zhao W, He J, Delucchi KL, Wang C, Wickersham N, McNeil JB, Jauregui A, Ke S, Vessel K, Gomez A, Hendrickson CM, Kangelaris KN, Sarma A, Leligdowicz A, Liu KD, Matthay MA, Ware LB, Laffey JG, Bellani G, Calfee CS, Sinha P"
+  doi: "10.1016/S2213-2600(21)00461-6"
+  pmid: "35026177"
+  kind: research
+
+- year: 2022
+  title: "NKG2D receptor activation drives primary graft dysfunction severity and poor lung transplantation outcomes"
+  journal: "JCI Insight"
+  authors: "Calabrese DR, Tsao T, Magnen M, Valet C, Gao Y, Mallavia B, Tian JJ, Aminian EA, Wang KM, Shemesh A, Punzalan EB, Sarma A, Calfee CS, Christenson SA, Langelier CR, Hays SR, Golden JA, Leard LE, Kleinhenz ME, Kolaitis NA, Shah R, Venado A, Lanier LL, Greenland JR, Sayah DM, Ardehali A, Kukreja J, Weigt SS, Belperio JA, Singer JP, Looney MR"
+  doi: "10.1172/jci.insight.164603"
+  pmid: "36346670"
+  kind: research
+
+- year: 2022
+  title: "Impact of e-cigarette aerosol on primary human alveolar epithelial type 2 cells"
+  journal: "American Journal of Physiology — Lung Cellular and Molecular Physiology"
+  authors: "Wick KD, Fang X, Maishan M, Matsumoto S, Spottiswoode N, Sarma A, Simoneau C, Khakoo M, Langelier C, Calfee CS, Gotts JE, Matthay MA"
+  doi: "10.1152/ajplung.00503.2021"
+  pmid: "35670478"
+  kind: research
+
+- year: 2021
+  title: "Tracheal aspirate RNA sequencing identifies distinct immunological features of COVID-19 ARDS"
+  journal: "Nature Communications"
+  authors: "Sarma A, Christenson SA, Byrne A, Mick E, Pisco AO, DeVoe C, Deiss T, Ghale R, Zha BS, Tsitsiklis A, Jauregui A, Moazed F, Detweiler AM, Spottiswoode N, Sinha P, Neff N, Tan M, Serpa PH, Willmore A, Ansel KM, Wilson JG, Leligdowicz A, Siegel ER, Sirota M, DeRisi JL, Matthay MA, Hendrickson CM, Kangelaris KN, Krummel MF, Woodruff PG, Erle DJ, Calfee CS, Langelier CR"
+  doi: "10.1038/s41467-021-25040-5"
+  pmid: "34446707"
+  role: first
+  kind: research
+  featured: true
+  code: "https://github.com/aartiksarma/COVIDARDS"
+  summary: >-
+    At the height of the pandemic, "cytokine storm" was the working theory for
+    why COVID-19 destroyed lungs. Sequencing fluid suctioned from breathing
+    tubes in 52 critically ill patients showed the opposite: less inflammatory
+    gene expression than in other kinds of ARDS, with a blunted interferon
+    response. The treatment implication runs the other way from the metaphor.
+
+- year: 2021
+  title: "Latent class analysis-derived subphenotypes are generalisable to observational cohorts of acute respiratory distress syndrome: a prospective study"
+  journal: "Thorax"
+  authors: "Sinha P, Delucchi KL, Chen Y, Zhuo H, Abbott J, Wang C, Wickersham N, McNeil JB, Jauregui A, Ke S, Vessel K, Gomez A, Hendrickson CM, Kangelaris KN, Sarma A, Leligdowicz A, Liu KD, Matthay MA, Ware LB, Calfee CS"
+  doi: "10.1136/thoraxjnl-2021-217158"
+  pmid: "34253679"
+  kind: research
+
+- year: 2021
+  title: "The sputum transcriptome better predicts COPD exacerbations after the withdrawal of inhaled corticosteroids than sputum eosinophils"
+  journal: "ERJ Open Research"
+  authors: "Ditz B, Sarma A, Kerstjens HAM, Liesker JJW, Bathoorn E, Vonk JM, Bernal V, Horvatovich P, Guryev V, Caldera S, Langelier C, Faiz A, Christenson SA, van den Berge M"
+  doi: "10.1183/23120541.00097-2021"
+  pmid: "34235210"
+  kind: research
+
+- year: 2020
+  title: "Prone positioning in awake, nonintubated patients with COVID-19: necessity is the mother of invention"
+  journal: "JAMA Internal Medicine"
+  authors: "Sarma A, Calfee CS"
+  doi: "10.1001/jamainternmed.2020.3027"
+  pmid: "32584940"
+  role: first
+  kind: commentary
+
+- year: 2019
+  title: "Biomarkers and precision medicine: state of the art"
+  journal: "Critical Care Clinics"
+  authors: "Sarma A, Calfee CS, Ware LB"
+  doi: "10.1016/j.ccc.2019.08.012"
+  pmid: "31733677"
+  role: first
+  kind: review
+
+- year: 2017
+  title: "A systems approach to healthcare innovation using the MIT Hacking Medicine model"
+  journal: "Cell Systems"
+  authors: "Gubin TA, Iyer HP, Liew SN, Sarma A, Revelos A, Ribas J, Movassaghi B, Chu ZM, Khalid AN, Majmudar MD, Lee CX"
+  doi: "10.1016/j.cels.2017.02.012"
+  pmid: "28750199"
+  kind: commentary
+
+- year: 2014
+  title: "A novel subtyping assay for detection of Clostridium difficile virulence genes"
+  journal: "The Journal of Molecular Diagnostics"
+  authors: "Angione SL, Sarma A, Novikov A, Seward L, Fieber JH, Mermel LA, Tripathi A"
+  doi: "10.1016/j.jmoldx.2013.11.006"
+  pmid: "24434086"
+  kind: research
+
+- year: 2013
+  title: "A systematic review of reported cost for smear and culture tests during multidrug-resistant tuberculosis treatment"
+  journal: "PLOS ONE"
+  authors: "Lu C, Liu Q, Sarma A, Fitzpatrick C, Falzon D, Mitnick CD"
+  doi: "10.1371/journal.pone.0056074"
+  pmid: "23457502"
+  kind: research
+
+- year: 2012
+  title: "A simple method for amplifying RNA targets (SMART)"
+  journal: "The Journal of Molecular Diagnostics"
+  authors: "McCalla SE, Ong C, Sarma A, Opal SM, Artenstein AW, Tripathi A"
+  doi: "10.1016/j.jmoldx.2012.02.001"
+  pmid: "22691910"
+  kind: research
+
+- year: 2012
+  title: "Ligation with nucleic acid sequence-based amplification"
+  journal: "The Journal of Molecular Diagnostics"
+  authors: "Ong C, Tai W, Sarma A, Opal SM, Artenstein AW, Tripathi A"
+  doi: "10.1016/j.jmoldx.2012.01.004"
+  pmid: "22449695"
+  kind: research
+
+- year: 2011
+  title: "Early in vitro transcription termination in human H5 influenza viral RNA synthesis"
+  journal: "Applied Biochemistry and Biotechnology"
+  authors: "Kerby MB, Sarma A, Patel MS, Artenstein AW, Opal SM, Tripathi A"
+  doi: "10.1007/s12010-010-9152-4"
+  pmid: "21207185"
+  kind: research
+
+- year: 2011
+  title: "The state of health policy education in U.S. medical schools"
+  journal: "New England Journal of Medicine"
+  authors: "Mou D, Sarma A, Sethi R, Merryman R"
+  doi: "10.1056/NEJMp1101603"
+  pmid: "21345091"
+  kind: commentary
