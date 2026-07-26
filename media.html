@@ -1,0 +1,45 @@
+---
+layout: wide
+title: Media
+subtitle: >-
+  Interviews and public commentary — mostly on where computational tools
+  genuinely help in medicine, and where they don't.
+permalink: /media/
+---
+
+<div class="wrap" style="padding-bottom: clamp(3rem, 7vw, 5rem)">
+  {%- if site.data.media.size > 0 %}
+  <div class="selected">
+    {%- for item in site.data.media %}
+    <article class="selected__item">
+      <p class="selected__meta">{{ item.date }}</p>
+
+      <div>
+        <h2 class="selected__title"><a href="{{ item.url }}">{{ item.title }}</a></h2>
+
+        <p class="selected__venue">
+          <span class="pub__journal">{{ item.outlet }}</span>
+          {%- if item.role %}<span class="tag tag--first">{{ item.role }}</span>{% endif -%}
+          {%- if item.host %}<span>with {{ item.host }}</span>{% endif -%}
+        </p>
+
+        {%- if item.blurb %}
+        <p class="selected__summary" style="margin-top:.8rem">{{ item.blurb }}</p>
+        {%- endif %}
+
+        {%- if item.quote %}
+        <blockquote class="pullquote">{{ item.quote }}</blockquote>
+        {%- endif %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+  {%- else %}
+  <p class="empty-note">Nothing listed yet.</p>
+  {%- endif %}
+
+  <p class="empty-note">
+    For press inquiries, the fastest route is
+    <a href="mailto:{{ site.author.email }}">email</a>.
+  </p>
+</div>

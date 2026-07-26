@@ -490,6 +490,19 @@ pre code { background: none; border: 0; padding: 0; }
 .selected__venue a { text-decoration: none; }
 .selected__venue a:hover { text-decoration: underline; }
 
+.pullquote {
+  margin: 1.15rem 0 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--accent);
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 52ch;
+  text-wrap: pretty;
+}
+.pullquote::before { content: "\201C"; }
+.pullquote::after  { content: "\201D"; }
+
 /* ==========================================================================
    Publications
    ========================================================================== */

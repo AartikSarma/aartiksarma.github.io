@@ -11,6 +11,7 @@ site rebuilds.
 | Name, title, email, social links | `_config.yml` |
 | Publication list | `_data/publications.yml` |
 | Software list | `_data/software.yml` |
+| Media / interviews | `_data/media.yml` |
 | Homepage copy | `index.html` |
 | Research narrative | `research.md` |
 | CV entries | `cv.html` |
@@ -48,6 +49,15 @@ Notes:
   appears once.
 - Publications sort by `year`, newest first. The filter chips on the page are
   driven by `role` and `kind`.
+
+## Adding a media appearance
+
+Add an entry to `_data/media.yml`. `title`, `outlet`, and `url` are required;
+`featured: true` also surfaces it on the homepage. The **Media** nav link only
+appears while that file has at least one entry.
+
+Use `quote` for a verbatim pull quote — keep it contiguous, don't splice
+sentences from different parts of a piece together.
 
 ## Starting the blog
 
