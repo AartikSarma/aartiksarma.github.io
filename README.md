@@ -34,10 +34,11 @@ Copy an existing block in `_data/publications.yml` and fill it in. Only `year`,
   kind: research     # research | review | commentary | guideline | trial
   featured: true     # promotes it to "Selected work" on the homepage
   code: "https://github.com/aartiksarma/repo"
-  summary: >-
-    One or two plain-language sentences saying why it matters. Shown under
-    featured papers.
 ```
+
+There is also an optional `summary` field — one or two plain-language sentences
+saying why a paper matters, rendered beneath it. It is unused at the moment; set
+it on any paper to turn it back on for that entry.
 
 Notes:
 
