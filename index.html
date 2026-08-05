@@ -2,267 +2,118 @@
 layout: default
 title: Home
 description: >-
-  Aartik Sarma is a pulmonary and critical care physician-scientist at UCSF. He
-  studies why patients with the same diagnosis respond differently to the same
-  treatment, using transcriptomics, metagenomics, and computational methods in
-  ARDS and sepsis.
+  Aartik Sarma is a pulmonary and critical care doctor at UCSF. He studies why
+  patients with the same diagnosis respond differently to the same treatment,
+  sequencing RNA from the lungs of critically ill patients and building open
+  tools for critical care data.
 ---
 
-<section class="hero">
-  <div class="wrap hero__grid">
-    <div>
-      <p class="hero__eyebrow">Pulmonary &amp; critical care · UCSF</p>
-
-      <h1 class="hero__name">Aartik Sarma</h1>
-
-      <p class="hero__lede">
-        I take care of people in the intensive care unit, and I study
-        <strong>why two patients with the same diagnosis can respond so
-        differently to the same treatment</strong>.
-      </p>
-
-      <p class="hero__body">
-        Critical illness is defined by what we can see at the bedside — a
-        low oxygen level, a chest X-ray, a blood pressure. Those definitions
-        gather together patients whose underlying biology has almost nothing in
-        common, which is one reason so many promising treatments work in the lab
-        and then fail in large trials. My lab reads the molecular state of the
-        lungs and blood directly, looking for the distinctions our current
-        definitions miss.
-      </p>
-
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">The research</a>
-        <a class="btn" href="{{ '/publications/' | relative_url }}">Publications</a>
-        <a class="btn" href="{{ '/software/' | relative_url }}">Code</a>
-      </div>
-    </div>
-
-    <aside class="rail">
-      <dl>
-        <div>
-          <dt>Position</dt>
-          <dd>{{ site.author.role }}<br>University of California, San Francisco</dd>
-        </div>
-        <div>
-          <dt>Affiliations</dt>
-          <dd>
-            Division of Pulmonary, Critical Care, Allergy &amp; Sleep Medicine<br>
-            Core faculty, Center for Precision Research in Critical Care<br>
-            Affiliate faculty, Computational Precision Health (UC Berkeley &amp; UCSF)
-          </dd>
-        </div>
-        <div>
-          <dt>Training</dt>
-          <dd>
-            Brown (ScB) · Harvard Medical School (MD)<br>
-            Massachusetts General Hospital · UCSF
-          </dd>
-        </div>
-        <div>
-          <dt>Elsewhere</dt>
-          <dd>
-            <a href="mailto:{{ site.author.email }}">Email</a> ·
-            <a href="https://github.com/{{ site.social.github }}">GitHub</a> ·
-            <a href="{{ site.social.scholar }}">Scholar</a>
-          </dd>
-        </div>
-      </dl>
-    </aside>
-  </div>
-</section>
-
-<!-- ===================================================================== -->
-
-<section class="section">
+<article class="note">
+  {%- comment -%}
+    Nested rather than sharing .wrap, so the column aligns to the same left edge
+    as the wordmark in the header instead of centring itself.
+  {%- endcomment -%}
   <div class="wrap">
-    <div class="section-head">
-      <h2 class="section-head__title">What I do</h2>
-    </div>
+  <div class="note__inner">
 
-    <div class="pillars">
-      <div class="pillar">
-        <span class="pillar__num">01</span>
-        <h3>Care for patients</h3>
-        <p>
-          I work as an attending physician in the ICU, caring for people with
-          respiratory failure, sepsis, and other critical illness. Every
-          research question I have started with a patient in front of me.
-        </p>
-      </div>
+    <h1 class="note__title">Hi, I'm Aartik.</h1>
 
-      <div class="pillar">
-        <span class="pillar__num">02</span>
-        <h3>Read the lung directly</h3>
-        <p>
-          We sequence RNA from airway fluid and blood in critically ill
-          patients — a molecular read-out of what the immune system is
-          actually doing, which no bedside measurement can show.
-        </p>
-      </div>
-
-      <div class="pillar">
-        <span class="pillar__num">03</span>
-        <h3>Build the tools</h3>
-        <p>
-          Analysis of this kind is only as trustworthy as the code behind it,
-          so I write and release it — statistical tools, federated ICU data
-          pipelines, and the analysis for each of my papers.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================================================================== -->
-
-<section class="section section--sunk">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 class="section-head__title">Selected work</h2>
-      <a class="section-head__more" href="{{ '/publications/' | relative_url }}">All publications &rarr;</a>
-    </div>
-
-    <div class="selected">
-      {%- assign featured = site.data.publications | where: "featured", true -%}
-      {%- for pub in featured %}
-      <article class="selected__item">
-        <p class="selected__meta">{{ pub.year }}</p>
-
-        <div>
-          <h3 class="selected__title">
-            {%- if pub.doi -%}
-            <a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a>
-            {%- else -%}
-            {{ pub.title }}
-            {%- endif -%}
-          </h3>
-
-          {%- if pub.summary %}
-          <p class="selected__summary">{{ pub.summary }}</p>
-          {%- endif %}
-
-          <p class="selected__venue">
-            <span class="pub__journal">{{ pub.journal }}</span>
-            {%- if pub.role == 'first' %}<span class="tag tag--first">First author</span>{% endif -%}
-            {%- if pub.role == 'senior' %}<span class="tag tag--senior">Senior author</span>{% endif -%}
-            {%- if pub.doi %}<a href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif -%}
-            {%- if pub.code %}<a href="{{ pub.code }}">Code</a>{% endif -%}
-          </p>
-        </div>
-      </article>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- ===================================================================== -->
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 class="section-head__title">Open code</h2>
-      <a class="section-head__more" href="{{ '/software/' | relative_url }}">All software &rarr;</a>
-    </div>
-
-    <p class="section-intro">
-      Tools I maintain for critical care data and genomics. Everything is
-      MIT- or GPL-licensed and open to contributions.
+    <p>
+      I'm a pulmonary and critical care doctor at UCSF. I look after people in
+      the intensive care unit, and I study why two patients with the same
+      diagnosis can respond completely differently to the same treatment.
     </p>
 
-    <div class="repo-grid">
-      {%- assign repos = site.data.software | where: "featured", true -%}
-      {%- for repo in repos limit: 6 %}
-      <article class="repo">
-        <div class="repo__head">
-          <h3 class="repo__name"><a href="https://github.com/{{ repo.repo }}">{{ repo.name }}</a></h3>
-          <span class="repo__lang">{{ repo.lang }}</span>
-        </div>
-        <p class="repo__blurb">{{ repo.blurb }}</p>
-        {%- if repo.paper %}
-        <p class="repo__paper">{{ repo.paper }}</p>
-        {%- endif %}
-      </article>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- ===================================================================== -->
-
-{%- assign media = site.data.media | where: "featured", true -%}
-{%- if media.size > 0 %}
-<section class="section section--sunk">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 class="section-head__title">Talking about the work</h2>
-      <a class="section-head__more" href="{{ '/media/' | relative_url }}">All media &rarr;</a>
-    </div>
-
-    <p class="section-intro">
-      Some of the most useful conversations I have about this research are with
-      people outside it.
+    <p>
+      Critical illness gets diagnosed from what you can see at the bedside — an
+      oxygen level, a chest X-ray, a blood pressure that won't hold. Those
+      definitions were built to work at 3 a.m. anywhere in the world, and they
+      do. But they put patients with almost nothing biologically in common into
+      the same box. A treatment that helps one group and harms another then
+      comes out of a trial looking like it does nothing at all, which is part of
+      why so much of what works in the lab fails in
+      <a href="{{ '/research/' | relative_url }}">large clinical trials</a>.
     </p>
 
-    <div class="selected">
-      {%- for item in media %}
-      <article class="selected__item">
-        <p class="selected__meta">{{ item.date }}</p>
-        <div>
-          <h3 class="selected__title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
-          {%- if item.blurb %}
-          <p class="selected__summary">{{ item.blurb | truncatewords: 45 }}</p>
-          {%- endif %}
-          <p class="selected__venue">
-            <span class="pub__journal">{{ item.outlet }}</span>
-            {%- if item.role %}<span class="tag tag--first">{{ item.role }}</span>{% endif -%}
-          </p>
-        </div>
-      </article>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-{%- endif %}
+    <p>
+      So my lab reads the biology directly. We sequence RNA from fluid suctioned
+      out of the breathing tubes of ventilated patients — a sample collected as
+      part of routine care and usually thrown away — and use it to find the
+      distinctions the bedside definitions miss.
+    </p>
 
-<!-- ===================================================================== -->
+    <p>A few things that came out of that:</p>
 
-{%- if site.posts.size > 0 %}
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 class="section-head__title">Writing</h2>
-      <a class="section-head__more" href="{{ '/writing/' | relative_url }}">All posts &rarr;</a>
-    </div>
-
-    <ul class="post-list">
-      {%- for post in site.posts limit: 3 %}
-      <li class="post-item">
-        <p class="post-item__date">{{ post.date | date: "%b %Y" }}</p>
-        <div>
-          <h3 class="post-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p class="post-item__excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p>
-        </div>
+    <ul class="note__list">
+      <li>
+        Blood tests split ARDS into two subtypes that respond differently to
+        treatment, but nobody had checked whether the split was real inside the
+        lung.
+        <a href="https://doi.org/10.1164/rccm.202407-1454OC">It is</a> — one
+        subtype shows far more interferon signaling and T-cell activity in the
+        airway itself.
       </li>
-      {%- endfor %}
+      <li>
+        The formula setting how large a breath every ventilated patient receives
+        was derived from height and sex in the 1990s. Across 21,000 patients,
+        <a href="https://doi.org/10.1016/S2213-2600(25)00126-2">it fits some
+        people much worse than others</a> — and the worse the fit, the higher
+        the odds of dying. Algorithmic bias, thirty years before machine
+        learning.
+      </li>
+      <li>
+        At the peak of the pandemic, "cytokine storm" was the working theory for
+        COVID-19 lung injury.
+        <a href="https://doi.org/10.1038/s41467-021-25040-5">Airway sequencing
+        showed the opposite</a>: less inflammatory gene expression than in other
+        kinds of ARDS, not more.
+      </li>
     </ul>
-  </div>
-</section>
-{%- endif %}
 
-<!-- ===================================================================== -->
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 class="section-head__title">Get in touch</h2>
-    </div>
-
-    <p class="section-intro">
-      I'm always glad to hear from trainees looking for a project, from
-      investigators with a cohort and a question, and from anyone who wants to
-      reuse the code. The fastest way to reach me is
-      <a href="mailto:{{ site.author.email }}">email</a>.
+    <p>
+      I write the analysis code for all of it and
+      <a href="{{ '/software/' | relative_url }}">release it</a>, along with
+      tools for federated ICU data, RNA-seq workflows, and Bayesian re-analysis
+      of clinical trials. Patient data mostly can't leave the hospital that holds
+      it, so a growing share of my work is infrastructure for asking questions
+      across many hospitals at once. If you work on that problem in any field,
+      I'd like to hear from you.
     </p>
+
+    <p>
+      I also <a href="{{ '/media/' | relative_url }}">talk about this publicly</a>
+      now and then — usually about where machine learning genuinely helps in
+      medicine, and where it's the wrong tool for the job.
+    </p>
+
+    {%- comment -%}
+    ---------------------------------------------------------------------------
+    THE PERSONAL PARAGRAPH GOES HERE.
+
+    Two or three sentences of non-work material — what you read, watch, cook,
+    argue about, where you grew up, what you were doing before medicine. This is
+    the part of the page a stranger will actually remember, and it's the one
+    paragraph nobody else can write for you.
+
+    Delete the comment markers around the block below and fill it in. Specific
+    beats tidy: named books and teams and obsessions land, "I enjoy travel and
+    the outdoors" does not.
+
+    <p>
+      Before medicine I studied engineering, and I still spend more time in R
+      than most people expect from a pulmonologist. Outside the hospital, …
+    </p>
+    ---------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <p class="note__sign">
+      You can reach me at
+      <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>. The
+      <a href="{{ '/publications/' | relative_url }}">full paper list is here</a>,
+      and the formal academic version — every affiliation, every committee —
+      lives on <a href="{{ site.social.ucsf_profile }}">UCSF Profiles</a>.
+    </p>
+
   </div>
-</section>
+  </div>
+</article>

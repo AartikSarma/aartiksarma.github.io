@@ -12,11 +12,24 @@ site rebuilds.
 | Publication list | `_data/publications.yml` |
 | Software list | `_data/software.yml` |
 | Media / interviews | `_data/media.yml` |
-| Homepage copy | `index.html` |
+| Homepage note | `index.html` |
 | Research narrative | `research.md` |
 | CV entries | `cv.html` |
 | Design tokens, all styling | `assets/css/main.css` |
 | Page shell, nav, footer | `_layouts/`, `_includes/` |
+
+## The homepage
+
+`index.html` is a first-person note aimed at a general and technical audience,
+not an academic one — the academic version is UCSF Profiles, linked at the end.
+It has no cards, buttons, or section headings: links sit inside the sentences
+and do the navigating. Keep it that way when editing, and keep it short. It is
+currently ~430 words.
+
+**There is an empty spot for a personal paragraph**, marked by a Liquid comment
+near the bottom of the file. Nothing placeholder-y is published while it stays
+commented out. Delete the comment markers and write two or three sentences of
+non-work material to turn it on.
 
 ## Adding a publication
 
