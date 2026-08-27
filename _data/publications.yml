@@ -22,6 +22,14 @@
 # ---------------------------------------------------------------------------
 
 - year: 2026
+  title: "Inflammatory phenotypes in severe pneumonia: clinical evidence to mouse models for precision therapeutics"
+  journal: "American Journal of Respiratory and Critical Care Medicine"
+  authors: "Taenaka H, Evrard B, Maishan M, Watanabe R, Alipanah-Lechner N, Carrillo SA, Sarma A, Spottiswoode N, Sullivan KM, Weingart MF, Zhuo H, Ringor A, Leroux C, Chao O, Lin C, Schmiege E, Hariharan T, Magee L, Willmore A, Chak S, Lee D, Bardillon K, Hendrickson C, Gotts JE, Langelier CR, Calfee CS, Matthay MA"
+  doi: "10.1093/ajrccm/aamag402"
+  pmid: "42535902"
+  kind: research
+
+- year: 2026
   title: "Multi-omic and single-cell approaches for elucidating cell biology and pathobiology of lung disease"
   journal: "American Journal of Respiratory Cell and Molecular Biology"
   authors: "Sarma A, Sun X, Sucre J, Hong J, Medzikovic L, Jakubzick CV, Li X, Zemans RL, Singer BD"
