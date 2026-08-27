@@ -1,9 +1,6 @@
 ---
 layout: page
 title: Research
-subtitle: >-
-  The longer version — what my lab actually does, and why the definitions we use
-  for critical illness are the thing standing in the way.
 permalink: /research/
 ---
 

@@ -1,9 +1,6 @@
 ---
 layout: wide
 title: Curriculum vitae
-subtitle: >-
-  The short version. Papers have their own page; the exhaustive institutional
-  record lives on UCSF Profiles.
 permalink: /cv/
 ---
 
@@ -146,10 +143,13 @@ review roles, additional grants, invited talks.
             {%- if pub.doi -%}<a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a>
             {%- else -%}{{ pub.title }}{%- endif -%}
           </h3>
+          {%- comment -%}
+            Authorship-position tags are deliberately not shown here — they mean
+            something to academics and nothing to everyone else. The publications
+            page still carries them.
+          {%- endcomment -%}
           <p class="selected__venue">
             <span class="pub__journal">{{ pub.journal }}</span>
-            {%- if pub.role == 'first' %}<span class="tag tag--first">First author</span>{% endif -%}
-            {%- if pub.role == 'senior' %}<span class="tag tag--senior">Senior author</span>{% endif -%}
           </p>
         </div>
       </article>
