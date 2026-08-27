@@ -10,38 +10,19 @@ site rebuilds.
 |---|---|
 | Name, title, email, social links | `_config.yml` |
 | Publication list | `_data/publications.yml` |
-| Software list (page currently off) | `_data/software.yml` |
 | Media / interviews | `_data/media.yml` |
-| Homepage note | `index.html` |
-| Research narrative | `research.md` |
+| Homepage bio and Selected work | `index.html` |
 | CV entries | `cv.html` |
 | Design tokens, all styling | `assets/css/main.css` |
 | Page shell, nav, footer | `_layouts/`, `_includes/` |
 
-## Parked pages
-
-**Software** and **Research** are both switched off rather than deleted:
-`software.html` and `research.md` carry `published: false`, so Jekyll skips
-them, and their nav links are commented out in `_includes/nav.html`. Each file's
-header comment lists the steps to bring it back, and `_data/software.yml` is
-untouched.
-
-While they're off, links that used to point at them go elsewhere: "open tools"
-on the homepage goes straight to GitHub, "large clinical trials" is plain text,
-and the 404 page points at Publications and Media instead.
-
 ## The homepage
 
-`index.html` is a first-person note aimed at a general and technical audience,
-not an academic one — the academic version is UCSF Profiles, linked at the end.
-It has no cards, buttons, or section headings: links sit inside the sentences
-and do the navigating. Keep it that way when editing, and keep it short. It is
-currently ~430 words.
-
-**There is an empty spot for a personal paragraph**, marked by a Liquid comment
-near the bottom of the file. Nothing placeholder-y is published while it stays
-commented out. Delete the comment markers and write two or three sentences of
-non-work material to turn it on.
+`index.html` has three parts: name and title, a two-sentence bio, and a
+"Selected work" list. The list is generated from `_data/publications.yml` —
+any entry with `featured: true` appears there, sorted newest first, with its
+`summary` shown underneath. Keep the bio short and let the papers do the
+talking.
 
 ## Adding a publication
 
@@ -58,12 +39,9 @@ Copy an existing block in `_data/publications.yml` and fill it in. Only `year`,
   role: first        # first | senior | (omit for contributing)
   kind: research     # research | review | commentary | guideline | trial
   featured: true     # promotes it to "Selected work" on the homepage
+  summary: "One or two plain-language sentences — rendered on the homepage."
   code: "https://github.com/aartiksarma/repo"
 ```
-
-There is also an optional `summary` field — one or two plain-language sentences
-saying why a paper matters, rendered beneath it. It is unused at the moment; set
-it on any paper to turn it back on for that entry.
 
 Notes:
 
@@ -92,23 +70,6 @@ There is an optional `quote` field for a pull quote. It suits someone else's
 words about the work better than quoting yourself, and is unused by default. If
 you do use it, keep the quote contiguous — don't splice sentences from different
 parts of a piece together.
-
-## Starting the blog
-
-Drop a file in `_posts/` named `YYYY-MM-DD-slug.md`:
-
-```markdown
----
-title: "Post title"
-subtitle: "Optional one-line standfirst"
-description: "Optional summary used on the index page and for SEO."
----
-
-Body text.
-```
-
-The **Writing** link appears in the navigation on its own once at least one post
-exists, and disappears again if the directory is emptied.
 
 ## Things worth knowing
 

@@ -74,6 +74,7 @@
   kind: research
   featured: true
   code: "https://github.com/aartiksarma/ARDSPhenotypes"
+  summary: "Blood-based ARDS subtypes reflect real biological differences inside the lung — the hyperinflammatory group shows far more interferon signaling and T-cell activity in airway samples."
 
 - year: 2025
   title: "Evaluating the generalisability of formulas used to set tidal volumes in mechanically ventilated patients: an observational, multicohort, retrospective study"
@@ -85,6 +86,7 @@
   kind: research
   featured: true
   code: "https://github.com/aartiksarma/PBWvsFVC"
+  summary: "The formula that sets breath size for every ventilated patient, derived from height and sex in the 1990s, fits some people much worse than others — and the worse the fit, the higher the odds of dying."
 
 - year: 2025
   title: "Longitudinal multiomic signatures of ARDS and sepsis inflammatory phenotypes identify pathways associated with mortality"
@@ -159,6 +161,7 @@
   role: senior
   kind: research
   featured: true
+  summary: "US traffic deaths rose sharply after 2020, and the increase fell disproportionately on Black Americans."
 
 - year: 2024
   title: "Rapidly improving ARDS differs clinically and biologically from persistent ARDS"
@@ -250,6 +253,7 @@
   kind: research
   featured: true
   code: "https://github.com/aartiksarma/COVIDARDS"
+  summary: "At the peak of the pandemic, cytokine storm was the working theory for COVID-19 lung injury. Airway sequencing showed the opposite — less inflammatory gene expression than in other kinds of ARDS, not more."
 
 - year: 2021
   title: "Latent class analysis-derived subphenotypes are generalisable to observational cohorts of acute respiratory distress syndrome: a prospective study"

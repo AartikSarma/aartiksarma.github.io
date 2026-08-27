@@ -47,18 +47,8 @@ linkedin_username: aartiksarma
 # ---------------------------------------------------------------------------
 # No `theme:` key — this site uses the local _layouts / _includes / assets.
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-
-permalink: /writing/:year/:month/:title/
-
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
 
 exclude:
   - .sass-cache/
