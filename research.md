@@ -2,7 +2,22 @@
 layout: page
 title: Research
 permalink: /research/
+published: false
 ---
+
+<!--
+-------------------------------------------------------------------------------
+This page is switched off, not deleted. `published: false` keeps Jekyll from
+building it while the file stays intact.
+
+To bring it back:
+  1. delete the `published: false` line above;
+  2. restore the Research link in _includes/nav.html;
+  3. relink "large clinical trials" in index.html, which is currently plain
+     text, and the research link in 404.html.
+-------------------------------------------------------------------------------
+-->
+
 
 Intensive care runs on syndromes rather than diseases. ARDS and sepsis are
 defined by clinical criteria — a threshold oxygen level, an infiltrate on a

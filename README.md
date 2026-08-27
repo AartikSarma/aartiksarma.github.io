@@ -18,13 +18,17 @@ site rebuilds.
 | Design tokens, all styling | `assets/css/main.css` |
 | Page shell, nav, footer | `_layouts/`, `_includes/` |
 
-## The Software page is parked
+## Parked pages
 
-`software.html` carries `published: false`, so Jekyll skips it and the nav link
-is commented out. The file and `_data/software.yml` are untouched — the header
-comment in `software.html` lists the three steps to bring it back. Until then,
-"open tools" on the homepage and "open source" on the research page point
-straight at GitHub.
+**Software** and **Research** are both switched off rather than deleted:
+`software.html` and `research.md` carry `published: false`, so Jekyll skips
+them, and their nav links are commented out in `_includes/nav.html`. Each file's
+header comment lists the steps to bring it back, and `_data/software.yml` is
+untouched.
+
+While they're off, links that used to point at them go elsewhere: "open tools"
+on the homepage goes straight to GitHub, "large clinical trials" is plain text,
+and the 404 page points at Publications and Media instead.
 
 ## The homepage
 

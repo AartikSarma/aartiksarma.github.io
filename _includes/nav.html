@@ -7,7 +7,11 @@
     </a>
 
     <nav class="site-nav" aria-label="Primary">
-      <a href="{{ '/research/' | relative_url }}"{% if page.url contains '/research' %} aria-current="page"{% endif %}>Research</a>
+      {%- comment -%}
+        The Research link is parked, not gone — research.md carries
+        `published: false`. Restore this line when that page comes back:
+        <a href="{{ '/research/' | relative_url }}"{% if page.url contains '/research' %} aria-current="page"{% endif %}>Research</a>
+      {%- endcomment -%}
       <a href="{{ '/publications/' | relative_url }}"{% if page.url contains '/publications' %} aria-current="page"{% endif %}>Publications</a>
       {%- comment -%}
         The Software link is parked, not gone — software.html carries
