@@ -79,7 +79,7 @@ leave the hospital that holds it. So a growing share of my work is plumbing:
 federated pipelines built on the CLIF common data model, where every site runs
 identical code locally and shares only summary statistics. That, along with
 tooling for reproducible Bayesian re-analysis and tidy RNA-seq workflows, is
-[open source]({{ '/software/' | relative_url }}).
+[open source](https://github.com/{{ site.social.github }}).
 
 This is where I'd most like help from people outside medicine. The hard parts
 are schema design, reproducibility, and getting one analysis to run correctly

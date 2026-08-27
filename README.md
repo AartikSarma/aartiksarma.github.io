@@ -10,13 +10,21 @@ site rebuilds.
 |---|---|
 | Name, title, email, social links | `_config.yml` |
 | Publication list | `_data/publications.yml` |
-| Software list | `_data/software.yml` |
+| Software list (page currently off) | `_data/software.yml` |
 | Media / interviews | `_data/media.yml` |
 | Homepage note | `index.html` |
 | Research narrative | `research.md` |
 | CV entries | `cv.html` |
 | Design tokens, all styling | `assets/css/main.css` |
 | Page shell, nav, footer | `_layouts/`, `_includes/` |
+
+## The Software page is parked
+
+`software.html` carries `published: false`, so Jekyll skips it and the nav link
+is commented out. The file and `_data/software.yml` are untouched — the header
+comment in `software.html` lists the three steps to bring it back. Until then,
+"open tools" on the homepage and "open source" on the research page point
+straight at GitHub.
 
 ## The homepage
 

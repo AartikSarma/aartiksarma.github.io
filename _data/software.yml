@@ -1,15 +1,23 @@
 # ---------------------------------------------------------------------------
 # Software and open code
 # ---------------------------------------------------------------------------
-# Fields: name, repo (GitHub path), lang, blurb, group, featured, paper (optional)
-# group: one of  tools | papers | experiments
+# NOTE: nothing renders this file at the moment. The Software page is switched
+# off — software.html carries `published: false`, and its header comment lists
+# the three steps to bring it back. This data is kept so that restoring the page
+# needs no rewriting.
+# ---------------------------------------------------------------------------
+# Fields: name, repo (GitHub path), lang, blurb, group
+# group: one of  tools | experiments
+#
+# There is deliberately no group for per-paper analysis code: each paper links
+# its own repository from _data/publications.yml, so listing them here too only
+# duplicated that.
 # ---------------------------------------------------------------------------
 
 - name: clifR
   repo: aartiksarma/clifR
   lang: R
   group: tools
-  featured: true
   blurb: >-
     An R port of clifpy for working with CLIF-format critical care data.
     CLIF is a common data model that lets ICU studies run the same analysis
@@ -19,7 +27,6 @@
   repo: aartiksarma/clifphewas
   lang: R
   group: tools
-  featured: true
   blurb: >-
     Federated phenome-wide association studies on CLIF ICU data, in a tidy
     interface. Each site runs the analysis locally and shares only summary
@@ -29,7 +36,6 @@
   repo: aartiksarma/tidyseq
   lang: R
   group: tools
-  featured: true
   blurb: >-
     Tidyverse-style wrappers for RNA-seq analysis in Bioconductor, so a
     differential expression workflow reads like the rest of your pipeline.
@@ -47,7 +53,6 @@
   repo: aartiksarma/omics_interpreter
   lang: Python
   group: experiments
-  featured: true
   blurb: >-
     An LLM agent that runs a differential expression analysis, mines the
     literature for context, and drafts an interpretation. An experiment in how
@@ -70,38 +75,10 @@
     A Slack bot that watches PubMed for new papers matching a saved query and
     posts them to a channel.
 
-- name: PBWvsFVC
-  repo: aartiksarma/PBWvsFVC
-  lang: R
-  group: papers
-  featured: true
-  paper: "Sarma et al., Lancet Respiratory Medicine 2025"
-  blurb: >-
-    Analysis code comparing predicted body weight with predicted forced vital
-    capacity in mechanically ventilated patients.
-
-- name: ARDSPhenotypes
-  repo: aartiksarma/ARDSPhenotypes
-  lang: R
-  group: papers
-  featured: true
-  paper: "Sarma et al., AJRCCM 2025"
-  blurb: >-
-    Airway transcriptomic analysis of ARDS hyperinflammatory and
-    hypoinflammatory molecular phenotypes.
-
-- name: COVIDARDS
-  repo: aartiksarma/COVIDARDS
-  lang: Jupyter
-  group: papers
-  paper: "Sarma et al., Nature Communications 2021"
-  blurb: >-
-    Tracheal aspirate RNA-seq analysis of COVID-19 ARDS.
-
 - name: CLIF-PBWPFVC
   repo: aartiksarma/CLIF-PBWPFVC
   lang: R
-  group: papers
+  group: experiments
   blurb: >-
     A federated, multi-site extension of the tidal volume work, implemented
     against the CLIF common data model.
