@@ -15,13 +15,24 @@ permalink: /media/
       <p class="selected__meta">{{ item.date }}</p>
 
       <div>
-        <h2 class="selected__title"><a href="{{ item.url }}">{{ item.title }}</a></h2>
+        <h2 class="selected__title">
+          {%- if item.url -%}
+          <a href="{{ item.url }}">{{ item.title }}</a>
+          {%- else -%}
+          {{ item.title }}
+          {%- endif -%}
+        </h2>
 
         <p class="selected__venue">
           <span class="pub__journal">{{ item.outlet }}</span>
           {%- if item.role %}<span class="tag tag--first">{{ item.role }}</span>{% endif -%}
-          {%- if item.host %}<span>with {{ item.host }}</span>{% endif -%}
+          {%- if item.host %}<span>hosted by {{ item.host }}</span>{% endif -%}
+          {%- if item.with %}<span>with {{ item.with }}</span>{% endif -%}
         </p>
+
+        {%- if item.published_as %}
+        <p class="selected__as">{{ item.published_as }}</p>
+        {%- endif %}
 
         {%- if item.blurb %}
         <p class="selected__summary" style="margin-top:.8rem">{{ item.blurb }}</p>

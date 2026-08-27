@@ -66,9 +66,15 @@ Notes:
 
 ## Adding a media appearance
 
-Add an entry to `_data/media.yml`. `title`, `outlet`, and `url` are required;
-`featured: true` also surfaces it on the homepage. The **Media** nav link only
-appears while that file has at least one entry.
+Add an entry to `_data/media.yml`, newest first. Only `title` and `outlet` are
+required — omit `url` and the title renders as plain text rather than a dead
+link. The **Media** nav link only appears while that file has at least one
+entry.
+
+When an outlet's own headline describes something other than your contribution
+— a roundup that bundles several pieces, say — title the entry for what you
+actually said and put their headline in `published_as`, which renders in small
+type underneath so a reader isn't surprised on arrival.
 
 There is an optional `quote` field for a pull quote. It suits someone else's
 words about the work better than quoting yourself, and is unused by default. If

@@ -1,19 +1,38 @@
 # ---------------------------------------------------------------------------
 # Media, interviews, and public commentary
 # ---------------------------------------------------------------------------
-# Fields:
-#   title    required. The episode or article title.
+# Newest first. Fields:
+#   title    required. The episode or article title. Where the outlet's own
+#            headline describes something other than your contribution — a
+#            roundup, say — write a title that describes what you actually said
+#            and record the outlet's headline in `published_as`.
 #   outlet   required. Publication or show name.
-#   url      required.
+#   url      optional. Omit it and the title renders as plain text rather than a
+#            dead link.
 #   role     optional. "Guest", "Interviewed", "Quoted", "Author" — shown as a tag.
-#   date     optional. Free text, e.g. "July 2026". Omitted cleanly if absent.
+#   date     optional. Free text, e.g. "August 2026". Omitted cleanly if absent.
 #   host     optional. Interviewer or host.
+#   with     optional. Other guests, as a display string.
+#   published_as optional. The outlet's own headline, shown in small type so a
+#            reader isn't surprised by a different title on arrival.
 #   blurb    optional. One or two sentences on what it covered.
 #   quote    optional. A verbatim pull quote — better suited to someone else's
 #            words about the work than to quoting yourself. If used, keep it
 #            contiguous; don't splice sentences from different parts of a piece.
-#   featured optional. true surfaces it on the homepage.
 # ---------------------------------------------------------------------------
+
+- title: "How data science and precision medicine go hand-in-hand"
+  outlet: "ATS Breathe Easy · American Thoracic Society"
+  # TODO: swap for the episode permalink — this is the show home page.
+  url: "https://site.thoracic.org/podcast/breathe-easy"
+  role: Guest
+  date: "August 2026"
+  host: "Lekshmi Santhosh"
+  with: "Pat Lyons (OHSU)"
+  blurb: >-
+    How data science arrived in critical care, what has actually changed at the
+    bedside as a result, and what the field still needs from its infrastructure
+    before precision medicine reaches ICU patients.
 
 - title: "Stripe's $500M bet to cure the common cold"
   outlet: "Lifers with Christina Farr · Second Opinion"
@@ -21,7 +40,6 @@
   role: Guest
   date: "July 2026"
   host: "Christina Farr"
-  featured: true
   blurb: >-
     On Intercept, the $500M initiative from Stripe, OpenAI, and Anthropic aimed
     at the common cold and flu: why a "cold" is a large and constantly mutating
@@ -30,13 +48,18 @@
     air filtration and nasal sprays in the near term, and vaccines targeting the
     conserved parts of these viruses over the longer one.
 
-- title: "Are we designing connection or escaping it? AI, teens, and the future of being human"
+- title: "Four Questions: the right tool isn't always an LLM"
   outlet: "Second Opinion"
   url: "https://secondopinion.media/p/roundup-are-we-designing-connection-or-escaping-it-ai-teens-and-the-future-of-being-human"
   role: Interviewed
-  featured: true
+  host: "Christina Farr"
+  published_as: >-
+    Runs inside the roundup "Are we designing connection or escaping it? AI,
+    teens, and the future of being human"
   blurb: >-
-    An interview on where machine learning actually helps in medicine and where
-    a large language model is the wrong tool, what it takes for a clinician to
-    contribute to medical AI, and why data fragmentation — not model
-    architecture — is the binding constraint on precision medicine.
+    Four questions on medical AI: why a large language model is often the wrong
+    tool for a clinical question and what to reach for instead, why deep domain
+    expertise matters as much as an ML background, where venture money could go
+    beyond generative AI, and what actually has to happen before any of it
+    reaches a patient. Data silos and honest evaluation turn out to matter more
+    than model architecture.

@@ -374,6 +374,16 @@ pre code { background: none; border: 0; padding: 0; }
   text-wrap: pretty;
 }
 
+/* Shown when the outlet's own headline differs from the title used here. */
+.selected__as {
+  font-family: var(--sans);
+  font-size: .78125rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: .5rem 0 0;
+  max-width: 58ch;
+}
+
 .selected__venue {
   font-family: var(--sans);
   font-size: .8125rem;
