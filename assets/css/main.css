@@ -245,7 +245,11 @@ pre code { background: none; border: 0; padding: 0; }
    Homepage note
    ========================================================================== */
 
-.note { padding-block: clamp(3.5rem, 8vw, 6rem) clamp(3rem, 7vw, 5rem); }
+.note { padding-block: clamp(2rem, 5vw, 3.5rem) clamp(2rem, 5vw, 3.5rem); }
+
+/* Tighten the gap between the homepage note and the first section so
+   Selected work is visible above the fold, not floating below whitespace. */
+.note + .section { padding-top: clamp(2rem, 5vw, 3.5rem); }
 
 .note__inner {
   max-width: 40rem;
@@ -274,6 +278,23 @@ pre code { background: none; border: 0; padding: 0; }
 
 .note__inner a {
   text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.note__links {
+  font-family: var(--sans);
+  font-size: .875rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.4rem;
+  margin-top: 1.75rem;
+}
+.note__links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.note__links a:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 /* ==========================================================================
