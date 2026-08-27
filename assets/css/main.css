@@ -247,13 +247,19 @@ pre code { background: none; border: 0; padding: 0; }
 
 .note { padding-block: clamp(1.5rem, 3vw, 2.25rem) clamp(1.25rem, 2.5vw, 1.75rem); }
 
-/* Homepage-only: pull Selected work close to the note so it lands above
-   the fold, and shrink the eyebrow gap that would otherwise re-open it. */
+/* Homepage-only: narrow the wrap so bio and Selected work share one
+   column (Massenkoff/Obermeyer style), pull Selected work close to the
+   note so it lands above the fold, and shrink the eyebrow gap that
+   would otherwise re-open it. */
+.note > .wrap,
+.note + .section > .wrap {
+  width: min(100% - 2.5rem, 48rem);
+  margin-inline: auto;
+}
 .note + .section { padding-top: clamp(1rem, 2vw, 1.5rem); }
 .note + .section .section-head { margin-bottom: 1.25rem; }
 
 .note__inner {
-  max-width: 40rem;
   font-size: 1.1875rem;
   line-height: 1.62;
 }
