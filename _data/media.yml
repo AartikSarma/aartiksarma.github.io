@@ -23,8 +23,7 @@
 
 - title: "How data science and precision medicine go hand-in-hand"
   outlet: "ATS Breathe Easy · American Thoracic Society"
-  # TODO: swap for the episode permalink — this is the show home page.
-  url: "https://site.thoracic.org/podcast/breathe-easy"
+  url: "https://www.youtube.com/watch?v=f5m6N6sdbDk"
   role: Guest
   date: "August 2026"
   host: "Lekshmi Santhosh"
