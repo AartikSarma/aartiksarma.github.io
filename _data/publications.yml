@@ -75,6 +75,9 @@
   featured: true
   code: "https://github.com/aartiksarma/ARDSPhenotypes"
   summary: "Blood-based ARDS subtypes reflect real biological differences inside the lung — the hyperinflammatory group shows far more interferon signaling and T-cell activity in airway samples."
+  commentary:
+    doi: "10.1093/ajrccm/aamag160"
+    reply_doi: "10.1093/ajrccm/aamag161"
 
 - year: 2025
   title: "Evaluating the generalisability of formulas used to set tidal volumes in mechanically ventilated patients: an observational, multicohort, retrospective study"
@@ -87,6 +90,8 @@
   featured: true
   code: "https://github.com/aartiksarma/PBWvsFVC"
   summary: "The formula that sets breath size for every ventilated patient, derived from height and sex in the 1990s, fits some people much worse than others — and the worse the fit, the higher the odds of dying."
+  commentary:
+    doi: "10.1016/S2213-2600(25)00134-1"
 
 - year: 2025
   title: "Longitudinal multiomic signatures of ARDS and sepsis inflammatory phenotypes identify pathways associated with mortality"

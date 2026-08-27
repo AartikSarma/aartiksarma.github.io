@@ -53,6 +53,12 @@ description: >-
           {%- endif %}
           <p class="selected__venue">
             <span class="pub__journal">{{ pub.journal }}</span>
+            {%- if pub.commentary %}
+            <a href="https://doi.org/{{ pub.commentary.doi }}">Commentary</a>
+            {%- if pub.commentary.reply_doi %}
+            <a href="https://doi.org/{{ pub.commentary.reply_doi }}">Reply</a>
+            {%- endif %}
+            {%- endif %}
           </p>
         </div>
       </article>
